@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <link rel="stylesheet" href="Formulario.css">
+   
+   
+    <link rel="shortcut icon" href="img/formul">
+    <title>Pagina Web Form</title>
+</head>
+<body>
+    
+
+    <form class="form">
+     
+            <h2 class="form_title" >Iniciar Seccion </h2>
+        
+            <div class="form_container">
+            
+                <div class="form_group">
+                    <input type="text" id="name" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Nombre:</label>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form_group">
+                    <input type="text" id="user" class="form_input" placeholder=" ">
+                    <label for="user" class="form_label">Usuario:</label>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form_group">
+                    <input type="password" id="password" class="form_input" placeholder=" " requeride="" pattern="[0-9]+">
+                    <label for="password" class="form_label">Contraseña:</label> <br>
+
+                    <span  class="form_control"></span> 
+                
+                    <div style=" position: absolute;" >
+                        <input type="checkbox" onclick="myFuction()">Ver contraseña  
+                    </div>
+                </div><br>
+                <a href ="#" class="form_submit" onclick="guardar()" style="text-decoration:none">Enviar</a>
+                <p class="form_paragraph"><a href="#" class="form_link">Crear cuenta</a></p>
+            </div>
+            
+    </form>
+    <script type="text/javascript">
+        function myFuction(){
+            var x = document.getElementById("password");
+            if (x.type==="password"){
+                x.type="text";
+            } else {
+                x.type="password";
+            }
+        }
+    </script>
+</body> 
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="/js/configuracion.js"></script>
+<script src="/js/guardar.js"></script>
+<script src="/js/ver.js"></script>
+
+
+
+
+
+
+
+</html>
